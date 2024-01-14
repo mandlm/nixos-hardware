@@ -34,14 +34,14 @@ in
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
 
   # enable webcam
-  hardware = {
-    ipu6 = {
-      enable = true;
-      platform = "ipu6ep";
-    };
-
-    firmware = [ ivsc-firmware ];
-  };
+  # hardware = {
+  #   ipu6 = {
+  #     enable = true;
+  #     platform = "ipu6ep";
+  #   };
+  #
+  #   firmware = [ ivsc-firmware ];
+  # };
 
   # Allows for updating firmware via `fwupdmgr`.
   services.fwupd.enable = true;
