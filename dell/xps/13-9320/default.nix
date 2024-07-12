@@ -36,6 +36,13 @@ in
   services.fprintd.tod.enable = true;
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
 
+  # WiFi speed is slow and crashes by default (https://bugzilla.kernel.org/show_bug.cgi?id=213381)
+  # disable_11ax - required until ax driver support is fixed
+  # power_save - works well on this card
+  boot.extraModprobeConfig = ''
+    options iwlwifi power_save=1 disable_11ax=1
+  '';
+
   # enable webcam
   # hardware = {
   #   ipu6 = {
