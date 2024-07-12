@@ -22,7 +22,7 @@ in
   imports = [
     ../../../common/cpu/intel
     ../../../common/pc/laptop
-    ../../../common/pc/ssd
+    ../../../common/pc/laptop/ssd
   ];
 
   hardware.enableRedistributableFirmware = true;
