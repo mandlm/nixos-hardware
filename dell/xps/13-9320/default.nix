@@ -27,6 +27,9 @@ in
 
   hardware.enableRedistributableFirmware = true;
 
+  # This will save you money and possibly your life!
+  services.thermald.enable = lib.mkDefault true;
+
   # enable finger print sensor.
   # this has to be configured with `sudo fprintd-enroll <username>`.
   services.fprintd.enable = true;
